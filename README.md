@@ -1,6 +1,12 @@
 # 💰 Console Expense Tracker
 
-A beginner-friendly Java console application for managing personal expenses while learning Object-Oriented Programming (OOP), Java Collections, and software design.
+A Java console-based application for managing personal expenses while learning Object-Oriented Programming (OOP), Java Collections, and software design/code organization.
+
+---
+
+## Why We Built This?
+
+This project was built to strengthen my understanding of Java Fundamentals before moving into Springboot backend development. It focuses on improving CRUD - operations, object orient design, and collection management without relying on an external framework.
 
 ---
 
@@ -33,13 +39,25 @@ src/
 └── com/
     └── dipangshu/
         └── expensetracker/
-            ├── Expense.java
-            ├── ExpenseManager.java
-            ├── Menu.java
-            └── Main.java
+            ├── Expense.java: Represents a single expense object.
+            ├── ExpenseManager.java: Contains business logic and manages all expenses.
+            ├── Menu.java: Displays the user menu.
+            └── Main.java: Application entry point and handles user interaction.
 ```
 
 ---
+
+## 🚀 How to Run?
+
+## Run Locally
+
+Clone the repository
+
+git clone https://github.com/callmedipangshudatta/ConsoleExpenseTracker.git
+
+Open in IntelliJ IDEA
+
+Run Main.java
 
 ## 🚀 Future Improvements
 
@@ -51,6 +69,16 @@ src/
 - User Authentication
 - Docker Deployment
 - AI-powered Expense Analysis
+
+---
+
+## Version
+
+Current Version: v1.0
+
+Status:
+
+✅ Java Console Application Complete
 
 ---
 
