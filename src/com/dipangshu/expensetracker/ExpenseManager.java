@@ -167,6 +167,7 @@ public class ExpenseManager {
         return total;
     }
 
+    //Method - 10
     public int getExpenseCount() {
         return expenses.size();
     }

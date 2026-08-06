@@ -17,6 +17,7 @@ public class Menu {
         System.out.println("7. Highest Expense");
         System.out.println("8. Lowest Expense");
         System.out.println("9. Total Category Expense");
+        System.out.println("10. Expense Count");
         System.out.println("10. Exit");
     }
 }
