@@ -18,25 +18,21 @@ public class Main {
     // 4. Executes code line by line
 
     public static void main(String[] args) {
+
+        //Read user input
         Scanner scanner = new Scanner(System.in);
-        //creates a reference
+
+        // creates a reference
+        // manages all expense-related operations
         // ExpenseManager manager -> empty
         // new ExpenseManager() -> creates object
         ExpenseManager manager = new ExpenseManager();
 
-        //interactive part of application
+        Menu menu = new Menu();
+
+        // keep interactive part of application, running
         while (true) {
-            System.out.println("=====Console Expense Tracker=====");
-            System.out.println("1. Add Expense");
-            System.out.println("2. View Expense");
-            System.out.println("3. Search Expense");
-            System.out.println("4. Update Expense");
-            System.out.println("5. Delete Expense");
-            System.out.println("6. Total Expense");
-            System.out.println("7. Highest Expense");
-            System.out.println("8. Lowest Expeense");
-            System.out.println("9. Total Category Expense");
-            System.out.println("10. Exit");
+            menu.displayMenu();
 
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
@@ -46,24 +42,25 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Enter Expense ID");
+                    System.out.println("Enter Expense ID:");
                     int id = scanner.nextInt();
 
-                    System.out.println("Enter Amount");
+                    System.out.println("Enter Amount:");
                     double amount = scanner.nextDouble();
                     scanner.nextLine(); //consume.nextLine()
 
-                    System.out.println("Enter Category");
+                    System.out.println("Enter Category:");
                     String category = scanner.nextLine();
 
-                    System.out.println("Enter Description");
+                    System.out.println("Enter Description:");
                     String description = scanner.nextLine();
 
-                    System.out.println("Enter Date (dd-mm-yyyy)");
+                    System.out.println("Enter Date (dd-mm-yyyy):");
                     String date = scanner.nextLine();
 
                     Expense expense = new Expense(id, amount, category, description, date);
                     manager.addExpense(expense);
+                    System.out.println("Expense Added Successfully");
                     break;
 
 
@@ -153,12 +150,11 @@ public class Main {
 
                 case 9:
                     System.out.println("Enter Category: ");
-                    scanner.nextLine();
                     String searchCategory = scanner.nextLine();
 
                     double total = manager.calculateCategoryTotalExpenses(searchCategory);
 
-                    System.out.println("Total "+ searchCategory +"Expense: Rs" + total);
+                    System.out.println("Total "+ searchCategory +" Expense: Rs" + total);
                     break;
 
                 case 10:
