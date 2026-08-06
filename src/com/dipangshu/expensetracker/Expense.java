@@ -1,3 +1,5 @@
+// Represent one Expense
+
 package com.dipangshu.expensetracker;
 
 //Represent one expense : contains only data
