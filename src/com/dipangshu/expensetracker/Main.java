@@ -44,6 +44,7 @@ public class Main {
                 case 1:
                     System.out.println("Enter Expense ID:");
                     int id = scanner.nextInt();
+                    scanner.nextLine();
 
                     System.out.println("Enter Amount:");
                     double amount = scanner.nextDouble();
